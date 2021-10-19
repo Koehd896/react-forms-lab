@@ -11,9 +11,11 @@ class LoginForm extends React.Component {
   }
 
   handleInputChange = (event) => {
+    console.log('handleInputChange was hit');
     const field = event.target.name;
+    console.log(event.target);
     this.setState({
-      field: event.target.value
+      [field]: event.target.value
     })
   }
 
